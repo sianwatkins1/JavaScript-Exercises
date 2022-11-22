@@ -7,22 +7,25 @@ window.answers = () => {
     let greeting
     if (hour < 12) {
         greeting = "Good morning"
-    } else {
+    } 
+    else if(hour >= 12 && hour <=18){
         greeting = "Good afternoon"
+    }
+    else {
+        greeting = "Good evening"
     }
 
 
     // #2 This code sets output to true if input is not zero
     // Change the condition so that output will equal true only if input is an even number greater than 20 or an odd number less than 10
     let output = false
-    if (input !== 0) {
+    if (input%2 ==0 && input>20 || input%2 == 1 && input <10) {
         output = true
     }
 
 
     // #3 Use a ternary operator (x = cond ? a : b) so that if there is exactly 1 rabbit, this line instead results in "There is 1 rabbit"
-    const rabbitString = "There are " +  numRabbits + " rabbits"
-
+    const rabbitString = numRabbits == 1 ? "There is 1 rabbit" : "There are " +  numRabbits + " rabbits"
 
     // #4 Write a for-loop that uses console.log to print out the numbers from 1 to 10 (inclusive) in ascending order
 
