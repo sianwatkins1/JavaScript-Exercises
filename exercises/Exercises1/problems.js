@@ -16,12 +16,12 @@ window.answers = () => {
     // const fruity = x yzz
     // const fruity = xyzz
     // const fruity = x + y + z + z
-    const fruity = x + w + y + z + z
+    const fruity = x + y + z + z
 
 
     // #3 A variable, named 'fruity2', should equal "a ba ba banana na".
     // Write an expression, using w, x, y, z as above, to make this happen.
-    const fruity2 = x + w + y + w + fruity
+    const fruity2 = x + y + y + y + z+ z + w + z
     
 
     // #4 This code encounters an error and crashes on the second line.
