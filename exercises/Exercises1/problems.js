@@ -4,7 +4,7 @@ window.answers = () => {
     
     // #1 Add the fewest number of brackets so that result is equal to 65.
     // (don't add, remove or change the numbers)
-    let result = 1 + 2 ** 2 * 3
+    let result = 1 + 2 ** (2 * 3)
 
 
     // #2 The variable 'fruity' should equal "a banana".
@@ -16,12 +16,12 @@ window.answers = () => {
     // const fruity = x yzz
     // const fruity = xyzz
     // const fruity = x + y + z + z
-    // const fruity = x + w + y + z + z
+    const fruity = x + w + y + z + z
 
 
     // #3 A variable, named 'fruity2', should equal "a ba ba banana na".
     // Write an expression, using w, x, y, z as above, to make this happen.
-    // const fruity2 = ???
+    const fruity2 = x + w + y + w + fruity
     
 
     // #4 This code encounters an error and crashes on the second line.
