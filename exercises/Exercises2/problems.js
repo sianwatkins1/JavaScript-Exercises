@@ -28,19 +28,30 @@ window.answers = () => {
     const rabbitString = numRabbits == 1 ? "There is 1 rabbit" : "There are " +  numRabbits + " rabbits"
 
     // #4 Write a for-loop that uses console.log to print out the numbers from 1 to 10 (inclusive) in ascending order
-
+    for(let i = 1; i<=10; i++){
+        console.log(i)
+    }
 
     // #5 Write a for-loop that uses console.log to print out the numbers from 1 to 10 (inclusive) in descending order
-
+    for(let i = 10; i>=1; i--){
+        console.log(i)
+    }
 
     // #6 Write a for-loop that will add up all the positive integers below 100 and store it in the sum variable
     let sum = 0
     // For loop goes here:
+    for(let i = 0; i<100; i++){
+        sum += i
+    }
+    console.log(sum)
 
 
     // #7 This for loop prints a 3x3 square of #s. Use a nested for-loop to make it print a square of numbers instead (123, 456, 789)
     for (let i=0; i<3; i++) {
-        let line = "###"
+        let line = ""
+        for (let index = i *3; index < 3 * i + 3; index ++){
+            line += index + 1
+        }
         console.log(line)
     }
 
@@ -78,6 +89,9 @@ window.answers = () => {
 
     // #12 Write a function called 'exclaim' that takes a single string and logs it with an exclamation mark after it
     // For example, exclaim("hello") should log "hello!" to the console
+    function exclaim(simpleString){
+        console.log(simpleString + "!")
+    }
 
 
     // #13 We would like "A", "B", "C", "D", "E" to be printed in the correct order.
@@ -106,11 +120,21 @@ window.answers = () => {
         console.log("E")
     }
     // Invoke your chosen function(s) after this line:
+    theFirst()
+    theThird()
 
 
     // #14 Write a function called largestCommonFactor that takes two number
     // and returns the largest common factor of those numbers
-    function largestCommonFactor () {
+    function largestCommonFactor (n1, n2) {
+        while(n1!=n2){
+            if(n1>n2)
+            n1=n1-n2;
+
+            else
+            n2=n2-n1
+        }
+        return n1;
 
     }
 
