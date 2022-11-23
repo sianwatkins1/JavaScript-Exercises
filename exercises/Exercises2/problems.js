@@ -99,10 +99,19 @@ window.answers = () => {
     // For example, 3**2 + 4**2 = 9 + 16 = 25 = 5**2.
     // There exists exactly one Pythagorean  triplet for which a + b + c = 1000.
     // Find a, b, and c
-    let a
-    let b
-    let c
     // Solution goes here:
+    const total = 1000;
+    let a;
+    let b;
+    let c;
+    for(a = 1; a<= total/3; a++){
+        for (b = a+1; b <= total/2; b++){
+            let c = total - a - b;
+            if(a*a + b*b == c*c){
+                console.log("a=%d, b=%d, c=%d\n",a,b,c)
+            }
+        }
+    }
 
 
     // #11 Complete this function so that it returns the product of the three numbers (the three numbers multiplied together)
