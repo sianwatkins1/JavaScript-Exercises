@@ -7,7 +7,23 @@
 */
 
 function isSortedAndHow(nums) {
-    
+    asc = true;
+    desc = true;
+    for (let i = 1; i<=nums.length; i++){
+        if(nums[i] > nums[i-1]){
+            desc = false;
+        }
+        else if (nums[i] < nums [i-1]){
+            asc = false;
+        }
+        }
+    if (asc){
+        return "yes, ascending"
+    } else if (desc){
+        return "yes, descending"
+    } else {
+        return "no"
+    }
 }
 
 // Do not modify this code
