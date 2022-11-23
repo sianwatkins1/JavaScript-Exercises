@@ -12,26 +12,23 @@ function findUnique(input) {
     for(let i = 0; i <input.length; i++) 
     { 
       isUnique = true;
-      count = 1; //Updates the count again to 1 for every new character
       
-          for(let j = i+1; j <input.length; j++) 
-          {
-              if(input[i] == input[j]) 
-              { 
-                  count++; 
-                  isUnique=false;
-              }
-              
-  
-          }
-              if(isUnique == true){
-                //push onto array
-                outputArray.push(input[i])
-              }
-
+      for(let j = 0; j <input.length; j++){
+        if (i==j){
+          continue
+        }
+        if(input[i] == input[j]){ 
+          //input.splice(j);
+          isUnique=false;
+        }
       }
+      if(isUnique == true){
+        //push onto array
+        outputArray.push(input[i])
+      }
+    }
   
-  return outputArray;
+  return outputArray[0];
 }
 
 // Do not modify this code
