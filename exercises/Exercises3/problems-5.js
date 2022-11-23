@@ -8,7 +8,30 @@
 */
 
 function findUnique(input) {
-    
+    let outputArray = [];
+    for(let i = 0; i <input.length; i++) 
+    { 
+      isUnique = true;
+      count = 1; //Updates the count again to 1 for every new character
+      
+          for(let j = i+1; j <input.length; j++) 
+          {
+              if(input[i] == input[j]) 
+              { 
+                  count++; 
+                  isUnique=false;
+              }
+              
+  
+          }
+              if(isUnique == true){
+                //push onto array
+                outputArray.push(input[i])
+              }
+
+      }
+  
+  return outputArray;
 }
 
 // Do not modify this code
