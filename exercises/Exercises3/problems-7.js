@@ -10,7 +10,18 @@
 */
 
 function encrypt(text, n) {
-    
+    const arr = text.split("");
+    // loop n times (i<n)
+    while(i < n){
+        // for each letter in array
+        for(){
+                //if i divisible by 1 put into string 1
+    // if divisible by 0 put into string 2
+        }
+        i++
+    }
+
+    //concat 2 strings
 }
 
 /*
