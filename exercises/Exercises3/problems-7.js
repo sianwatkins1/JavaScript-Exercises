@@ -13,24 +13,29 @@ function encrypt(text, n) {
     let textArray = text.split("");
     let i = 0
 
-    while(i < n){
-        let str1 = []
-        let str2 = []
-        for(let letter = 0; letter <textArray.length; letter++){
-
-            if(letter %2 == 0 || letter == 0){
-            // if divisible by 2 or equal 0 put into string 2 (to be stuck on the end)
-                str2.push(textArray[letter])
-            }
-            else if (letter %2 !==0){
-            //if i not divisible by 2 or put into string 1 (to be put at the front)
-                str1.push(textArray[letter])
-            }
-            
-        }    
-        textArray = str1.concat(str2).join("")   
-        i++
+    if(n !== 0){
+        while(i < n){
+            let str1 = []
+            let str2 = []
+            for(let letter = 0; letter <textArray.length; letter++){
+    
+                if(letter %2 == 0 || letter == 0){
+                // if divisible by 2 or equal 0 put into string 2 (to be stuck on the end)
+                    str2.push(textArray[letter])
+                }
+                else if (letter %2 !==0){
+                //if i not divisible by 2 or put into string 1 (to be put at the front)
+                    str1.push(textArray[letter])
+                }
+                
+            }    
+            textArray = str1.concat(str2).join("")   
+            i++
+        }
+    }else{
+        textArray = textArray.join("")
     }
+
     return textArray
 }
 
